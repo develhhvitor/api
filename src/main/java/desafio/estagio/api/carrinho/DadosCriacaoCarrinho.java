@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public record DadosCriacaoCarrinho(
         @NotNull BigDecimal valorTotal,
-        @NotNull Cliente cliente
+        @NotNull Cliente clienteId
 ) {
     public static void criar(Long clienteId) {
 

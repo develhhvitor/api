@@ -24,12 +24,12 @@ public class Carrinho {
 
     private BigDecimal valorTotal;
 
-    @OneToOne
+    @OneToOne(mappedBy = "clientes")
     private Cliente clienteId;
 
     public Carrinho(DadosCriacaoCarrinho dados) {
         this.valorTotal = dados.valorTotal();
-        this.clienteId = dados.cliente();
+        this.clienteId = dados.clienteId();
     }
 
     public Long getId() {
